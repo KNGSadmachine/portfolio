@@ -1,0 +1,16 @@
+body{background-color: white;
+    font-family: Meiryo;}
+
+    div{background-color: whitesmoke;
+        text-align: center;
+        width: 500px;
+        padding: 10px;
+        margin: 30px auto;}
+    
+    h1{font-size:15px;
+        color:black;}
+    
+    p{color: tomato;
+        text-align: left;
+    padding-left: 10%;}
+    
