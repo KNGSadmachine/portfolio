@@ -9,7 +9,8 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth,wait_on_rate_limit = True)
 
 user = input("「@ユーザー名」を入力してください：")
-followerIDs = api.followers_ids(user)
+#followerIDs = api.followers_ids(user)
+followerIDs = api.friends_ids(user)
 
 followerDatas = []
 for followerID in followerIDs:
