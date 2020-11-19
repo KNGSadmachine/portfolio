@@ -15,12 +15,12 @@ followerDatas = []
 for followerID in followerIDs:
     followerData = {}
     data = api.get_user(followerID)
-    followerData["Name"] = data.name
-    followerData["Follow"] = data.friends_count
-    followerData["Follower"] = data.followers_count
+    followerData["Name"] = data.screen_name
+    #followerData["Follow"] = data.friends_count
+    #followerData["Follower"] = data.followers_count
     #followerData["Description"] = data.description
-    followerData["TweetCount"] = data.statuses_count
-    followerData["created_at"] = data.created_at
+    #followerData["TweetCount"] = data.statuses_count
+    #followerData["created_at"] = data.created_at
     followerDatas.append(followerData)
 
 #import pandas
@@ -31,8 +31,8 @@ for followerID in followerIDs:
 #ファイル出力
 #fileName = input("ファイル名を入力してください：")
 #df.to_csv(fileName + ".csv")
-#print(followerDatas)
+print(followerDatas)
 #print(api.get_user(user))
-from prettyprinter import cpprint # prettyprinterのインポート
+#from prettyprinter import cpprint # prettyprinterのインポート
 
-cpprint(api.get_user(user))
+#cpprint(api.get_user(user))
