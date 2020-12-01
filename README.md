@@ -13,4 +13,8 @@ Confidential!
 
 ・Python
 
-テストでアップロードのため特に中身はない
+TwitterAPIについて作ったものなど
+
+・compro
+
+競技プログラミングの回答集
