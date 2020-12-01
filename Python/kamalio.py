@@ -7,6 +7,7 @@ if a >=20:
     print(a)
 else:
     print("bad!!!")
-    
+    import datetime
+    print(datetime.datetime.now())
     print(a)
 
