@@ -11,6 +11,7 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth,wait_on_rate_limit = True)
 print("START TIME")
 print(datetime.datetime.now())
+
 user = input("「@ユーザー名」を入力してください：")
 followerIDs = api.followers_ids(user)
 followIDs = api.friends_ids(user)
