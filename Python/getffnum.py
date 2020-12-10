@@ -1,13 +1,10 @@
-CONSUMER_KEY = "T5jA1etmYE17DdF9L2EJ5q3DC"
-CONSUMER_SECRET = "W1hGZhZoCOwgnXFNmAXcgq8rQeny3ygksSaFlAgtEQ2WxSIX8C"
-ACCESS_TOKEN = "1268793730032525312-KEsf8qt95wDRlkIp3KCKll3HbjQ5uL"
-ACCESS_TOKEN_SECRET = "vWhTwRRQPppaPd0kHoiBZtUqqwGo6JXRrOyxO5qqgHKdA"
+
 
 import tweepy
 import datetime
 import csv
 import pprint
-import pandas as pd
+#import pandas as pd
 
 #魔法の言葉
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
@@ -25,10 +22,10 @@ Follower_num_list = list(range(0))
 for i in range(len(user)-1):
     User = user[i]
     User_info = api.get_user(User)
-    User_info
+    print(User_info)
     Follower_count = int(User_info.followers_count)
-    print(User)
-    print(Follower_count)
+    #print(User)
+    #print(Follower_count)
     Follower_num_list.append(User)
     Follower_num_list.append(Follower_count)
 
@@ -40,8 +37,9 @@ Follower_num_list.insert(1,End_time)
 
 print(Start_time)
 print(End_time)
-print(Follower_num_list)
+#print(Follower_num_list)
 
-with open ("/Users/sadmachine/OneDrive/MASTER/MATLAB/samp.csv", 'w') as f:
-    writer = csv.writer(f)
-    writer.writerow (Follower_num_list)
+# with open ("/Users/sadmachine/OneDrive/MASTER/MATLAB/{}.csv".format(End_time), 'w') as f:
+#     writer = csv.writer(f)
+#     writer.writerow (Follower_num_list)
+# print("Finish")
