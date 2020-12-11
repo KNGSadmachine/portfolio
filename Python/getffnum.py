@@ -22,7 +22,7 @@ Follower_num_list = list(range(0))
 for i in range(len(user)-1):
     User = user[i]
     User_info = api.get_user(User)
-    print(User_info)
+    #print(User_info)
     Follower_count = int(User_info.followers_count)
     #print(User)
     #print(Follower_count)
@@ -39,7 +39,7 @@ print(Start_time)
 print(End_time)
 #print(Follower_num_list)
 
-# with open ("/Users/sadmachine/OneDrive/MASTER/MATLAB/{}.csv".format(End_time), 'w') as f:
-#     writer = csv.writer(f)
-#     writer.writerow (Follower_num_list)
-# print("Finish")
+with open ("/Users/sadmachine/OneDrive/MASTER/MATLAB/{}.csv".format(End_time), 'w') as f:
+    writer = csv.writer(f)
+    writer.writerow (Follower_num_list)
+print("Finish")
