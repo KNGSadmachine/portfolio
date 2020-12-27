@@ -31,6 +31,121 @@ if __name__ == '__main__':
 
     print(len(Mon) - len(Death))
 
+###################################################
+
+import sys
+import itertools
+import math
+
+def lcm(x, y):
+    return (x * y) // math.gcd(x, y)
+
+Input = list(range(0))
+if __name__ == '__main__':
+    lines = []
+    for l in sys.stdin:
+        lines.append(l.rstrip('\r\n'))
+    for i, v in enumerate(lines):
+        Status = v
+        Status = Status.split()
+        Input.append(Status)
+
+    Lev_M = [10,724]
+    Kill = [3]
+    Spell = [7,39,51]
+
+    Lev_M = [int(i) for i in Input[0]]
+    Kill = [int(i) for i in Input[1]]
+    Spell = [int(i) for i in Input[2]]
+
+    
+    Ans = list(range(0))
+    Dub = list(range(0))
+    if 1 in Spell:
+        print(0)
+    else:
+            
+        for i in Spell:
+            Can_Kill = (Lev_M[1] - Lev_M[0])//i
+            Ans.append(Can_Kill)
+
+        for pair in itertools.combinations(Spell,2):
+            Dub.append(pair)
+        
+        for i in range(len(Dub)-1):
+            Not_Kill = (-Lev_M[1] + Lev_M[0])//lcm(Dub[i][0],Dub[i][1])
+            Ans.append(Not_Kill)
+        #print(Ans)
+        if 1 in Kill:
+            print(Lev_M[1] - Lev_M[0]  - sum(Ans))
+        else:
+            print(Lev_M[1] - Lev_M[0] +1 - sum(Ans))
+
+#############################
+import sys
+import itertools
+import math
+
+def lcm(x, y):
+    return (x * y) // math.gcd(x, y)
+
+Input = list(range(0))
+if __name__ == '__main__':
+    lines = []
+    for l in sys.stdin:
+        lines.append(l.rstrip('\r\n'))
+    for i, v in enumerate(lines):
+        Status = v
+        Status = Status.split()
+        Input.append(Status)
+
+    Lev_M = [int(i) for i in Input[0]]
+    Kill = [int(i) for i in Input[1]]
+    Spell = [int(i) for i in Input[2]]
+    Spell = sorted(Spell)
+    
+    Ans = list(range(0))
+    Dub = list(range(0))
+    if 1 in Spell:
+        print(0)
+    elif Lev_M[1] < 1000000:
+        Mon = list(range(int(Lev_M[0]),int(Lev_M[1]) +1,1))
+    
+        Death = list(range(0))
+        for i in range(int(Kill[0])):
+            for j in range(int(len(Mon))):
+                if int(Mon[j])%int(Spell[i]) == 0:
+                    Death.append(Mon[j])
+
+        Death = sorted(Death)  
+        Death = [str(n) for n in Death] 
+        for i in reversed(range(len(Death)-1)): 
+            if Death[i] == Death[i+1]:
+                del Death[i]
+
+        print(len(Mon) - len(Death))
+    else:
+        Ans = list(range(0))
+        Dub = list(range(0))
+        Num = sorted(Spell, reverse=True)
+        for i in Spell:
+            Can_Kill = (Lev_M[1] - Lev_M[0])//i
+            Ans.append(Can_Kill)
+
+        for pair in itertools.combinations(Spell,2):
+            Dub.append(pair)
+        
+        for i in range(len(Dub)-1):
+            Not_Kill = (-Lev_M[1] + Lev_M[0])//lcm(Dub[i][0],Dub[i][1])
+            Ans.append(Not_Kill)
+        #print(Ans)
+        if 1 in Kill:
+            print(Lev_M[1] - Lev_M[0]  - sum(Ans))
+        else:
+            print(Lev_M[1] - Lev_M[0] +1 - sum(Ans))
+
+#↑14個正解
+
 # ok 1 [単純なケース] 1以上10以下のレベルの敵がいて、呪文の数が2個であるときに正答できる
 
 # ok 2 [単純なケース] 10以上724以下のレベルの敵がいて、呪文の数が3個であるときに正答できる
