@@ -3,7 +3,7 @@
 # smtp_host = 'smtp.gmail.com'
 # smtp_port = 587
 # username = 'sansuu716@gmail.com'
-# password = 'izaiza00'
+# password = ''
 # from_address = 'sansuu716@gmail.com'
 # to_address = 'sansuu716@gmail.com'
 # subject = 'test subject'
