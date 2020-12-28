@@ -1,7 +1,7 @@
+
 import tweepy
 import datetime
 import csv
-import pprint
 
 #魔法の言葉
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
@@ -10,6 +10,7 @@ api = tweepy.API(auth,wait_on_rate_limit = True)
 
 #開始時間の記述
 Start_time = datetime.datetime.now()
+
 
 with open("/Library/WebServer/portfolio/Python/username.csv", encoding = "utf-8-sig") as fp:
     user = fp.read().splitlines()
