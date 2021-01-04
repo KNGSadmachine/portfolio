@@ -1,3 +1,8 @@
+CONSUMER_KEY = "T5jA1etmYE17DdF9L2EJ5q3DC"
+CONSUMER_SECRET = "W1hGZhZoCOwgnXFNmAXcgq8rQeny3ygksSaFlAgtEQ2WxSIX8C"
+ACCESS_TOKEN = "1268793730032525312-KEsf8qt95wDRlkIp3KCKll3HbjQ5uL"
+ACCESS_TOKEN_SECRET = "vWhTwRRQPppaPd0kHoiBZtUqqwGo6JXRrOyxO5qqgHKdA"
+
 import tweepy
 import datetime
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
@@ -8,21 +13,21 @@ print(datetime.datetime.now())
 
 user = input("「@ユーザー名」を入力してください：")
 followerIDs = api.followers_ids(user)
-followIDs = api.friends_ids(user)
 
-print(api.get_user(user))
+print(len(followerIDs))
+# print(sorted(followerIDs))
+# followIDs = api.friends_ids(user)
+
+# print(api.get_user(user))
 
 # followerDatas = []
 # for followerID in followerIDs:
 #     followerData = {}
 #     data = api.get_user(followerID)
-#     followerData[] = data.screen_name
-#     #followerData["Follow"] = data.friends_count
-#     #followerData["Follower"] = data.followers_count
-#     #followerData["Description"] = data.description
-#     #followerData["TweetCount"] = data.statuses_count
-#     #followerData["created_at"] = data.created_at
+#     followerData = data.screen_name
 #     followerDatas.append(followerData)
+
+# print(followerDatas)
 
 # followDatas = []
 # for followID in followIDs:

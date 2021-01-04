@@ -31,13 +31,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="到着" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAg-3z-XKY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="到着" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAg-3z-XKY">
                                 <rect key="frame" x="120" y="417" width="174" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUP-CZ-Frd">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUP-CZ-Frd">
                                 <rect key="frame" x="120" y="796" width="174" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="GO"/>
@@ -45,10 +45,10 @@
                                     <segue destination="x2z-Bv-QsG" kind="show" id="AXu-Lw-hue"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7x-Wc-wOo">
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7x-Wc-wOo">
                                 <rect key="frame" x="10" y="193" width="405" height="216"/>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fE2-YQ-OMc">
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fE2-YQ-OMc">
                                 <rect key="frame" x="5" y="439" width="404" height="216"/>
                             </pickerView>
                         </subviews>
@@ -65,6 +65,7 @@
                             <constraint firstItem="m7x-Wc-wOo" firstAttribute="top" secondItem="YBx-lU-13t" secondAttribute="bottom" constant="7.5" id="KvP-4e-IXH"/>
                             <constraint firstItem="m7x-Wc-wOo" firstAttribute="top" secondItem="YBx-lU-13t" secondAttribute="bottom" constant="2" id="NPl-xV-mf9"/>
                             <constraint firstItem="bAg-3z-XKY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="Qn1-ub-15C"/>
+                            <constraint firstItem="CUP-CZ-Frd" firstAttribute="top" secondItem="fE2-YQ-OMc" secondAttribute="bottom" constant="10" id="S5Y-eZ-GWL"/>
                             <constraint firstItem="m7x-Wc-wOo" firstAttribute="top" secondItem="YBx-lU-13t" secondAttribute="bottom" id="VSZ-RN-d0Q"/>
                             <constraint firstItem="YBx-lU-13t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="WPo-uI-YAt"/>
                             <constraint firstItem="m7x-Wc-wOo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="1" id="abY-zU-X73"/>
