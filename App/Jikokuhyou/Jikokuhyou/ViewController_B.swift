@@ -10,14 +10,14 @@ import UIKit
 class ViewController_B: UIViewController {
     
     var imageName : String!
-    
+    @IBOutlet weak var pickLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickLabel.text = imageName
 
         // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation

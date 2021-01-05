@@ -1,3 +1,7 @@
+CONSUMER_KEY = "T5jA1etmYE17DdF9L2EJ5q3DC"
+CONSUMER_SECRET = "W1hGZhZoCOwgnXFNmAXcgq8rQeny3ygksSaFlAgtEQ2WxSIX8C"
+ACCESS_TOKEN = "1268793730032525312-KEsf8qt95wDRlkIp3KCKll3HbjQ5uL"
+ACCESS_TOKEN_SECRET = "vWhTwRRQPppaPd0kHoiBZtUqqwGo6JXRrOyxO5qqgHKdA"
 
 import tweepy
 import datetime
@@ -20,9 +24,10 @@ print(Start_time)
 with open("/Library/WebServer/portfolio/Python/username.csv", encoding = "utf-8-sig") as fp:
     user = fp.read().splitlines()
 
-for i in range(len(user)-1):
+for i in range(37,51,1):
     User = user[i]
     FollowerIDs = api.followers_ids(User)
+    print(len(FollowerIDs))
     # FollowerIDs = [str(follower) for follower in FollowerIDs]
     with open ("/Users/kk/OneDrive/MASTER/MATLAB/FollowIDs/{}.csv".format(User), 'w') as f:
         writer = csv.writer(f)

@@ -26,6 +26,8 @@ class ViewController_A: UIViewController,UIPickerViewDataSource,UIPickerViewDele
             picker_Arr.delegate = self
             picker_Arr.tag = 2
         }
+    
+    //Pickerの処理
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -50,6 +52,18 @@ class ViewController_A: UIViewController,UIPickerViewDataSource,UIPickerViewDele
         }
     }
     
+    @IBOutlet weak var pickLabel: UILabel!
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+            pickLabel.text = "SEND"
+        }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            // segue の遷移先が secondViewCOntroller だった場合の処理
+            if let nextVC = segue.destination as? ViewController_B{
+                // nextVC (= secondViewController のインスタンス) の imageName にラベルの値を入れる
+                nextVC.imageName = "SEND"
+            }
+        }
     
    
    
