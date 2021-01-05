@@ -8,6 +8,9 @@
 import UIKit
 
 class ViewController_B: UIViewController {
+    
+    var imageName : String!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
