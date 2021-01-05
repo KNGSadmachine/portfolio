@@ -1,7 +1,3 @@
-CONSUMER_KEY = "T5jA1etmYE17DdF9L2EJ5q3DC"
-CONSUMER_SECRET = "W1hGZhZoCOwgnXFNmAXcgq8rQeny3ygksSaFlAgtEQ2WxSIX8C"
-ACCESS_TOKEN = "1268793730032525312-KEsf8qt95wDRlkIp3KCKll3HbjQ5uL"
-ACCESS_TOKEN_SECRET = "vWhTwRRQPppaPd0kHoiBZtUqqwGo6JXRrOyxO5qqgHKdA"
 
 import tweepy
 import datetime
@@ -11,10 +7,10 @@ api = tweepy.API(auth,wait_on_rate_limit = True)
 print("START TIME")
 print(datetime.datetime.now())
 
-user = input("「@ユーザー名」を入力してください：")
-followerIDs = api.followers_ids(user)
+user = input("「ユーザー名」を入力してください：")
+followerIDs = api.followers_ids("@" + user)
 
-print(len(followerIDs))
+print(followerIDs)
 # print(sorted(followerIDs))
 # followIDs = api.friends_ids(user)
 
