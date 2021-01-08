@@ -52,10 +52,10 @@ class ViewController_A: UIViewController,UIPickerViewDataSource,UIPickerViewDele
         }
     }
     
-    @IBOutlet weak var pickLabel: UILabel!
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-            pickLabel.text = "SEND"
-        }
+//    @IBOutlet weak var pickLabel: UILabel!
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//            pickLabel.text = "SEND"
+//        }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             // segue の遷移先が secondViewCOntroller だった場合の処理
