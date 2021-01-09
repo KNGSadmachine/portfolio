@@ -1,4 +1,3 @@
-
 import tweepy
 import datetime
 import csv
@@ -20,7 +19,8 @@ print(Start_time)
 with open("/Library/WebServer/portfolio/Python/username.csv", encoding = "utf-8-sig") as fp:
     user = fp.read().splitlines()
 
-for i in range(91,100,1):
+# user = ["@itoi_shigesato","@toeikotsu","@kenichiromogi","@tsubasamasuwaka"]
+for i in range(len(user)):
     User = user[i]
     FollowerIDs = api.followers_ids(User)
     print(len(FollowerIDs))
